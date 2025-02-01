@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <link rel="icon" href="budget-icon.png">
+</head>
+<body>
+    <header>
+        <h1>Personal Budget Tracker</h1>
+        <nav>
+            <p>( <a href="#home">Home</a> | <a href="#add-income-expense">Add Expense</a> | <a href="#budget-summary">View Budget</a> )</p>
+        </nav>
+    </header>
+    <hr>
+
+    <section id="home">
+        <h2>Welcome to the Personal Budget Tracker</h2>
+        <p>This is a simple personal budget tracker that helps you keep track of your expenses and income. 
+            You can add your expenses and income, and view your budget to see how 
+            much you have spent and how much you have saved.
+            You can also view your budget history to see how your expenses and income have changed over time.
+        </p>
+    </section>
+    <hr>
+
+    <section id="add-income-expense">
+        <h2>Add Income/Expense</h2>
+        <form action="">
+            <label for="income">Amount: </label> 
+            <input type="number" id="income" name="income" placeholder="Enter Amount" required> <br><br>
+
+            <label for="amttype">Type: </label>
+            <input type="radio" name="amttype" id="income-type" value="income"> Income
+            <input type="radio" name="amttype" id="expense-type" value="expense"> Expense <br><br> 
+
+            <label for="description">Description: </label>
+            <input type="text" id="description" name="description" placeholder="Enter description" required> <br><br>
+
+            <label for="category">Category: </label>
+            <select name="category" id="category">
+                <option value="">--Select Category--</option>
+                <option value="food">Food</option>
+                <option value="transportation">Transportation</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="bills">Bills</option>
+                <option value="salary">Salary</option>
+                <option value="housing">Housing</option>
+            </select> <br><br>
+
+            <label for="date">Date: </label> 
+            <input type="date" id="date" name="date" required> <br><br>
+
+            <button type="submit">Add</button>
+        </form>
+    </section>
+    <hr>
+
+    <section id="budget-summary">
+        <h2>Budget Summary</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th rowspan="2">Date</th>
+                    <th rowspan="2">Category</th>
+                    <th colspan="2">Transaction Details</th>
+                    <th rowspan="2">Type</th>
+                    <th rowspan="2">Action</th>
+                </tr>
+                <tr>
+                    <th>Amount</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2025-01-01</td>
+                    <td>Salary</td>
+                    <td>10000</td>
+                    <td>Monthly paycheck</td>
+                    <td>Income</td>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>2025-01-02</td>
+                    <td>Housing</td>
+                    <td>1000</td>
+                    <td>Rent payment</td>
+                    <td>Expense</td>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>2025-01-05</td>
+                    <td>Food</td>
+                    <td>200</td>
+                    <td>Groceries</td>
+                    <td>Expense</td>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>2025-01-10</td>
+                    <td>Transportation</td>
+                    <td>50</td>
+                    <td>Bus fare</td>
+                    <td>Expense</td>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <hr>
+
+    <footer>
+        <p>
+            &copy; 2025 Personal Budget Tracker - Version 1.0 | 
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Use</a>
+        </p>
+    </footer>
+</body>
+</html>
